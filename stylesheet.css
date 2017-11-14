@@ -1,0 +1,633 @@
+/*
+*
+* Title: Gift Ideas Landing Page
+* Author: Michael Manlulu
+* Date: November 2017
+*
+*/
+
+
+/* --------------------------------------------- */
+/* STARTER SETUPS
+/* --------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* Font Render Optimize */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    background-color: #fff;
+    color: #333333;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+body { background-color: #fff; }
+
+/* --------------------------------------------- */
+/* REUSABLE COMPONENTS
+/* --------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+}
+
+p, a, blockquote, span, button {
+    font-family: 'montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+a:not(.underlined):hover,
+a:not(.underlined):active,
+a:not(.underlined):visited {
+  text-decoration: none !important;
+  opacity: 0.8;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+  
+.wrapper {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+
+/* --------------------------------------------- */
+/* HEADER
+/* --------------------------------------------- */
+
+#fmc-main-header .navbar {
+    height: 80px;
+    margin-bottom: 0;
+}
+
+/* Header Left */
+.navbar-brand {
+    position: relative;
+    height: 100% !important;
+    left: 100px;
+}
+.brand-img { 
+    width: 180px; 
+}
+
+/* Header Right */
+.navbar-right {
+    position: relative;
+    display: block;
+    height: 78px !important;
+    right: 100px;
+}
+.navbar-right li {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+.navbar-right li a { 
+    padding: 29px 15px; 
+    color: #323232 !important;
+    font-weight: 400; 
+}
+.navbar-right li a i {
+    margin-right: 10px;
+}
+
+/* --------------------------------------------- */
+/* SECTION - HERO
+/* --------------------------------------------- */
+
+.section-hero {
+    min-height: 580px;
+    background: url('https://dummyimage.com/1980x720/dce8f1/ffffff&text=+') center right no-repeat;
+    background-size: cover;
+}
+
+/* Hero Header */
+.hero-santa-hat {
+    position: absolute;
+    width: 60px;
+
+    /* Flip horizontally */
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
+    top: -17px;
+    left: -25px;
+}
+.hero-header {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    min-width: 400px;
+    margin-top: 150px;
+}
+.hero-header h1 {
+    font-size: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #282828;
+}
+
+/* Hero Sub Header */
+.hero-subheader {
+    position: relative;
+    display: block;
+    float: left;
+    width: 60%;
+    min-width: 400px;
+    margin-top: 20px;
+}
+.hero-subheader-texts {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+}
+.hero-subheader-texts h3 {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.3rem;
+}
+.hero-subheader-texts:last-child {
+    border-left: 1px solid #A3A3A3;
+    padding-left: 20px;
+}
+.hero-subheader-texts img {
+    width: 120px;
+}
+
+/* --------------------------------------------- */
+/* SECTION - FEATURES
+/* --------------------------------------------- */
+
+.section-features {
+    background: #3F87DC;
+}
+.features-container {
+    position: relative;
+    display: block;
+    float: left;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features-content {
+    padding: 25px 25px;
+    position: relative;
+    display: inline-block;
+}
+.features-content p {
+    color: #E9F5FF;
+    margin-bottom: 0 !important;
+}
+
+/* --------------------------------------------- */
+/* SECTION - REGIFT INTRO 
+/* --------------------------------------------- */
+
+.section-regift-intro {
+    padding: 20px 0;
+    padding-top: 90px;
+}
+.regift-container {
+    position: relative;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+.regift-container h2 {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 36px;
+}
+.regift-container h2:after {
+    content: '';
+    position: relative;
+    display: block;
+    border-top: 4px dotted #BDBDBD;
+    height: 2px;
+    width: 35%;
+    margin: 0 auto;
+    top: 23px;
+}
+.regift-stars {
+    position: relative;
+    display: block;
+    float: left;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.stars {
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+}
+.section-regift-intro .fa-star {
+    font-size: 25px;
+    color: #FFBB00;
+}
+.regift-container p {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* --------------------------------------------- */
+/* SECTION - REGIFT CONTENTS 
+/* --------------------------------------------- */
+
+/* REGIFT PRICE HEADERS */
+.section-regift-contents {
+    padding: 20px 0;
+    padding-top: 100px;
+}
+.regift-contents-container {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.regift-price-text:link,
+.regift-price-text:visited,
+.regift-price-text:active {
+    position: relative;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px 35px;
+    border: 2px solid #555;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    color: #555;
+    transition: all 0.2s ease-in-out;
+}
+.regift-price-text:active {
+    border: 2px solid #888;
+    color: #888;
+}
+.section-regift-contents p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* REGIFT CATEGORY HEADERS */
+.regift-category-headers {
+    margin-top: 30px;
+    height: 258px;
+}
+.product-item-container {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 0 15px;
+}
+.product-item-img {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.product-item-info {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.category-header-desc,
+.category-header-price,
+.category-header-title {
+    position: relative;
+    display: block;
+}
+.category-header-desc {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1;
+}
+.category-header-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+.category-header-price {
+    font-size: 30px;
+    font-weight: 700;
+}
+.product-gallery-text {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 10px !important;
+}
+.find-vehicle-btn:visited,
+.find-vehicle-btn:active,
+.find-vehicle-btn:link {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 30px;
+    background: #FF494B;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 50px 0;
+    transition: all 0.1s ease-in-out;
+}
+.find-vehicle-btn:hover {
+    opacity: 1 !important;
+    background: #FF6566 !important;
+}
+
+/* --------------------------------------------- */
+/* SECTION - SUPPORT AND FEATURES 
+/* --------------------------------------------- */
+
+.section-support-and-features {
+    padding: 20px 0;
+}
+.support-n-features-container {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.support-n-features-header-img {
+    position: relative;
+    display: block;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.support-n-features-header {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+.support-n-features-header:after {
+    content: '';
+    position: relative;
+    display: block;
+    border-top: 4px dotted #BDBDBD;
+    height: 2px;
+    width: 30%;
+    margin: 0 auto;
+    top: 23px;
+}
+.support-n-features-desc {
+    text-align: center;
+}
+.support-container {
+    position: relative;
+    display: block;
+    width: 50%;
+    min-width: 850px;
+    float: left;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
+.support-item {
+    position: relative;
+    display: block;
+    float: left;
+    width: 33.33%;
+}
+.support-item .support-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+}
+.support-item .support-desc {
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+}
+.main-features-container {
+    margin-top: 100px;
+}
+.main-features-img {
+    position: relative;
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+}
+.main-features-title {
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+}
+.main-features-desc {
+    margin: 0;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* --------------------------------------------- */
+/* SECTION - AWARDEE
+/* --------------------------------------------- */
+.section-awardee {
+    padding: 20px 0;
+    padding-top: 100px;
+}
+.orias-award-container {
+    position: relative;
+    display: block;
+    float: left;
+    width: 30%;
+    padding: 0 20px;
+}
+.orias-award-container img {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.testimonial-container {
+    position: relative;
+    display: block;
+    float: left;
+    width: 70%;
+    margin-top: 50px;
+}
+.testimonial-stars {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.testimonial-stars .fa-star {
+    font-size: 30px;
+    color: #FFBB00;
+}
+.testimonial-source {
+    margin-top: 10px;
+    width: 150px;
+    float: right;
+}
+
+/* --------------------------------------------- */
+/* SECTION - SEARCH VEHICLE
+/* --------------------------------------------- */
+
+.secion-search-vehicle {
+    padding: 130px 0;
+}
+
+.secion-search-vehicle h4 {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+}
+.secion-search-vehicle h4:before {
+    content: '';
+    position: relative;
+    display: block;
+    border-top: 4px dotted #BDBDBD;
+    height: 2px;
+    width: 40%;
+    bottom: 23px;
+    margin: 0 auto;
+}
+.search-vehicle-widget-container {
+    margin-top: 30px;
+}
+.search-vehicle-widget-container img {
+    width: 100%;
+}
+
+/* --------------------------------------------- */
+/* SECTION - RECOMMENDATION
+/* --------------------------------------------- */
+
+.section-recommendation {
+    padding: 70px;
+    background: #e4ecf5;
+}
+.recommendation-item {
+    padding: 30px 0;
+}
+.recommendation-item:not(:last-child) {
+    border-bottom: 1px solid #cbd2da;
+}
+.recommendation-item-left {
+    position: relative;
+    display: block;
+    float: left;
+    width: 30%;
+    padding: 0 15px;
+}
+.recommendation-item-left img {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.recommendation-video {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 250px;
+}
+.recommendation-item-right {
+    position: relative;
+    display: block;
+    float: left;
+    width: 70%;
+    margin-top: 20px;
+}
+.recommendation-item-title {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.recommendation-item-title:after {
+    content: '';
+    position: relative;
+    display: block;
+    border-top: 4px dotted #BDBDBD;
+    height: 2px;
+    width: 35%;
+    top: 23px;
+}
+.recommendation-read-more:link,
+.recommendation-read-more:visited, 
+.recommendation-read-more:active  {
+    margin-top: 15px;
+    color: #FF383B;
+    transition: all 0.2s ease-in-out;
+}
+.recommendation-read-more:hover {
+    color: #FF4345;
+}
+/* --------------------------------------------- */
+/* HEADER
+/* --------------------------------------------- */
+
+.footer-contents {
+    position: relative;
+    display: block;
+    background: #242424;
+    border-top: 30px solid #555;
+    padding: 20px 0;
+}
+
+.copyright:link,
+.copyright:visited,
+.copyright:active {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: #969696;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.copyright:hover {
+    color: #CCCCCC;
+}
