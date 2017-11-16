@@ -130,13 +130,27 @@ a:not(.underlined):visited {
     min-height: 580px;
     background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner1.jpg') center center no-repeat;
     background-size: cover;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 .section-hero.banner-2 {
     background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner2.jpg') center center no-repeat;
 }
 .section-hero.banner-3 {
     background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner3.jpg') center center no-repeat;
+}
+#main-hero-banner:before {
+	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+    animation: snow 10s linear infinite;
 }
 /* Hero Header */
 .hero-santa-hat {
@@ -702,6 +716,7 @@ a:not(.underlined):visited {
 .recommendation-read-more:hover {
     color: #FF4345;
 }
+
 /* --------------------------------------------- */
 /* FOOTER
 /* --------------------------------------------- */
@@ -728,3 +743,28 @@ a:not(.underlined):visited {
 .copyright:hover {
     color: #CCCCCC;
 }
+
+/* --------------------------------------------- */
+/* CSS3 ANIMATIONS
+/* --------------------------------------------- */
+
+@keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  }
+  @-moz-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+  }
+  @-webkit-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  }
+  @-ms-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  }	

@@ -61,6 +61,9 @@ $(function() {
             animateHeroBanner();
         }, 2250);
     }
+
+    // SNOW FX ANIMATION
+    
 });
 
     
