@@ -116,17 +116,28 @@ a:not(.underlined):visited {
 .navbar-right li a i {
     margin-right: 10px;
 }
-
+.navbar-right li:first-child a:hover { 
+    opacity: 1;
+}
+.header-live-chat {
+    cursor: pointer;
+}
 /* --------------------------------------------- */
 /* SECTION - HERO
 /* --------------------------------------------- */
 
 .section-hero {
     min-height: 580px;
-    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1440x580_car-gifts-banner1.jpg') center center no-repeat;
+    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner1.jpg') center center no-repeat;
     background-size: cover;
+    transition: all 0.3s ease-in-out;
 }
-
+.section-hero.banner-2 {
+    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner2.jpg') center center no-repeat;
+}
+.section-hero.banner-3 {
+    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner3.jpg') center center no-repeat;
+}
 /* Hero Header */
 .hero-santa-hat {
     position: absolute;
@@ -148,7 +159,7 @@ a:not(.underlined):visited {
     float: left;
     width: 50%;
     min-width: 400px;
-    margin-top: 150px;
+    margin-top: 195px;
 }
 .hero-header h1 {
     font-size: 55px;
@@ -276,13 +287,20 @@ a:not(.underlined):visited {
     padding: 20px 0;
     padding-top: 100px;
 }
+.section-regift-contents .col-sm-4:nth-child(1), .section-regift-contents .col-sm-4:nth-child(2) {
+    border-right: 1px solid #eaeaea;
+}
+.section-regift-contents .col-sm-4 {
+    position: relative;
+    display: block;
+    float: left;
+    min-height: 958px;
+}
 .regift-contents-container {
     margin-right: 100px;
     margin-left: 100px;
 }
-.regift-price-text:link,
-.regift-price-text:visited,
-.regift-price-text:active {
+.regift-price-text {
     position: relative;
     display: block;
     width: 50%;
@@ -295,10 +313,15 @@ a:not(.underlined):visited {
     font-size: 22px;
     color: #555;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
-.regift-price-text:active {
-    border: 2px solid #888;
-    color: #888;
+.regift-price-text:hover {
+    opacity: 0.8;
+    color: #555;
+}
+.regift-price-headers p {
+    font-size: 20px;
+    margin-top: 10px;
 }
 .section-regift-contents p {
     text-align: center;
@@ -307,8 +330,31 @@ a:not(.underlined):visited {
 
 /* REGIFT CATEGORY HEADERS */
 .regift-category-headers {
-    margin-top: 30px;
+    margin-top: 15px;
     height: 258px;
+    transition: all 0.3s ease-in-out;
+}
+.product-items {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.product-items span,
+.product-items p {
+    color: #333 !important;
+}
+.product-items img {
+    transition: all 0.3s ease-in-out;
+}
+.col-sm-4.hovered .product-items:hover img {
+    filter: brightness(1.15);
+}
+.col-sm-4.hovered .regift-category-headers,
+.col-sm-4.hovered .regift-product-galleries {
+    opacity: 0.8;
+}
+.product-items:hover img {
+    opacity: 1 !important;
+    filter: brightness(1.1) !important;
 }
 .product-item-container {
     position: relative;
@@ -317,6 +363,7 @@ a:not(.underlined):visited {
     width: 50%;
     height: 100%;
     padding: 0 15px;
+    margin: 15px 0 !important;
 }
 .product-item-img {
     position: relative;
@@ -341,6 +388,11 @@ a:not(.underlined):visited {
     font-weight: 400;
     line-height: 1;
 }
+.category-header-desc-2 {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 0.4;
+}
 .category-header-title {
     font-size: 26px;
     font-weight: 700;
@@ -349,6 +401,13 @@ a:not(.underlined):visited {
     font-size: 30px;
     font-weight: 700;
 }
+.category-header-price strong {
+    font-size: 24px !important;
+    font-weight: 500;
+}
+.regift-product-galleries {
+    transition: all 0.3s ease-in-out;
+}
 .product-gallery-text {
     position: relative;
     display: block;
@@ -356,9 +415,7 @@ a:not(.underlined):visited {
     width: 100%;
     margin-top: 10px !important;
 }
-.find-vehicle-btn:visited,
-.find-vehicle-btn:active,
-.find-vehicle-btn:link {
+.find-vehicle-btn {
     position: relative;
     display: inline-block;
     left: 50%;
@@ -370,11 +427,13 @@ a:not(.underlined):visited {
     text-align: center;
     border-radius: 5px;
     margin: 50px 0;
+    cursor: pointer;
     transition: all 0.1s ease-in-out;
 }
 .find-vehicle-btn:hover {
     opacity: 1 !important;
     background: #FF6566 !important;
+    color: #fff;
 }
 
 /* --------------------------------------------- */
@@ -431,6 +490,17 @@ a:not(.underlined):visited {
     display: block;
     float: left;
     width: 33.33%;
+}
+.support-item:not(:first-child) {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.support-item:not(:first-child):hover {
+    opacity: 0.8;
+}
+.support-item a {
+    color: #333 !important;
+    text-decoration: none;
 }
 .support-item .support-title {
     text-align: center;
@@ -598,12 +668,36 @@ a:not(.underlined):visited {
     width: 35%;
     top: 23px;
 }
-.recommendation-read-more:link,
-.recommendation-read-more:visited, 
-.recommendation-read-more:active  {
+.article-1 h6 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.common-mat-issues span {
+    color: #D74243;
+}
+.common-mat-issues { 
+    padding-left: 75px; 
+}
+.article-1-more-content,
+.article-2-more-content {
+    display: none;
+}
+.article-2-more-content p {
+    padding-bottom: 25px !important;
+    border-bottom: 1px solid #cbd2da;
+}
+.design-your-mat-img {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+.recommendation-read-more {
     margin-top: 15px;
     color: #FF383B;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 .recommendation-read-more:hover {
     color: #FF4345;
