@@ -32,7 +32,7 @@ html {
     overflow-x: hidden;
 }
 
-body { background-color: #fff; }
+body { background-color: #fff; overflow-x: hidden; }
 
 /* --------------------------------------------- */
 /* REUSABLE COMPONENTS
@@ -125,19 +125,6 @@ a:not(.underlined):visited {
 /* --------------------------------------------- */
 /* SECTION - HERO
 /* --------------------------------------------- */
-
-.section-hero {
-    min-height: 580px;
-    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner1.jpg') center center no-repeat;
-    background-size: cover;
-    transition: all 0.4s ease-in-out;
-}
-.section-hero.banner-2 {
-    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner2.jpg') center center no-repeat;
-}
-.section-hero.banner-3 {
-    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner3.jpg') center center no-repeat;
-}
 #main-hero-banner:before {
 	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
     content: '';
@@ -151,6 +138,18 @@ a:not(.underlined):visited {
 	-moz-animation: snow 10s linear infinite;
 	-ms-animation: snow 10s linear infinite;
     animation: snow 10s linear infinite;
+}
+.section-hero {
+    min-height: 580px;
+    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner1.jpg') center center no-repeat;
+    background-size: cover;
+    transition: all 0.4s ease-in-out;
+}
+.section-hero.banner-2 {
+    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner2.jpg') center center no-repeat;
+}
+.section-hero.banner-3 {
+    background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner3.jpg') center center no-repeat;
 }
 /* Hero Header */
 .hero-santa-hat {
@@ -348,13 +347,21 @@ a:not(.underlined):visited {
     height: 258px;
     transition: all 0.3s ease-in-out;
 }
+.regift-category-headers .product-item-img {
+    top: 50%;
+    transform: translateY(-50%);
+}
 .product-items {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 .product-items span,
 .product-items p {
+    text-align: center;
     color: #333 !important;
+}
+.product-item-info span {
+    text-align: left !important;
 }
 .product-items img {
     transition: all 0.3s ease-in-out;
@@ -743,6 +750,583 @@ a:not(.underlined):visited {
 .copyright:hover {
     color: #CCCCCC;
 }
+
+
+/* --------------------------------------------- */
+/* QUERIES
+/* --------------------------------------------- */
+
+
+@media screen and (max-width: 1199px) {
+    .regift-container p {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #main-hero-banner .container {
+        width: 100%;
+        height: 580px;
+        background: linear-gradient(to right, rgba(0, 186, 255, 0.36), rgba(0, 114, 255, 0.29));
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-subheader-texts h3 {
+        transform: translateY(25%);
+    }
+}
+
+
+
+/* --------------------------------------------- */
+/* LG DESKTOP VIEW - (min: 1200px | max: 1440px)
+/* --------------------------------------------- */
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    /* REGIFT CONTENTS SECTION */
+    .regift-price-text {
+        width: 70%;
+    }
+    .regift-category-headers {
+        margin-top: 0;
+    }
+    .regift-category-headers .product-item-container {
+        margin-top: 0 !important;
+    }
+    .section-regift-contents {
+        padding-top: 70px;
+    }
+    .regift-contents-container {
+        margin: 50px;
+    }
+    /* RECOMMENDATION SECTION */
+    .section-recommendation {
+        padding: 70px 0;
+    }
+    .recommendation-item-right {
+        padding-right: 15px;
+    }
+    
+}
+
+/* ------------------------------------------------------- */
+/* TABLET - MD DESKTOP VIEW - (min: 768px | max: 1199px)
+/* ------------------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    /* HERO SECTION */
+    .section-hero {
+        background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner1.jpg') -700px center no-repeat;
+    }
+    .section-hero.banner-2 {
+        background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner2.jpg') -700px center no-repeat;
+    }
+    .section-hero.banner-3 {
+        background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner3.jpg') -700px center no-repeat;
+    }
+    #main-hero-banner .hero-header,
+    #main-hero-banner .hero-subheader {
+        left: 50px;
+    }
+    .hero-subheader-texts:first-child h3 {
+        transform: translateY(25%);
+        padding-right: 10px;
+    }
+    .hero-subheader-texts:last-child {
+        border-left: 2px solid #90bbdc;
+    }
+    /* TOP FEATURES SECTION */
+    .features-container {
+        padding: 10px 0;
+    }
+    .features-content:nth-child(1),
+    .features-content:nth-child(2),
+    .features-content:nth-child(3) {
+        width: 32%;
+        padding: 15px 0;
+    }
+    .features-content:nth-child(4),
+    .features-content:nth-child(5) {
+        width: 49%;
+        padding: 15px 0;
+    }
+    .features-content p {
+        text-align: center;
+    }
+    /* REGIFT INTRO SECTION */
+    .regift-contents-container .wrapper {
+        float: none;
+    }
+    .regift-container {
+        width: 100%;
+    }
+    /* REGIFT CONTENTS SECTION */
+    .regift-contents-container {
+        margin: 0;
+    }
+    .regift-price-text {
+        width: 70%;
+    }
+    .section-regift-contents p {
+        margin-bottom: 0;
+    }
+    .regift-category-headers {
+        margin-top: 0;
+    }
+    .regift-category-headers .product-item-container {
+        width: 100%;
+        height: unset;
+    }
+    .regift-category-headers .product-item-img {
+        top: unset;
+        transform: none;
+    }
+    .product-item-info {
+        top: unset;
+        transform: unset;
+        min-height: 110px;
+    }
+    .product-item-info span {
+        text-align: center !important;
+    }
+    .category-header-desc-2 {
+        position: relative;
+        display: block;
+        font-size: 14px;
+    }
+    .regift-product-galleries .product-item-container:not(:last-child) {
+        min-height: 170px;
+    }
+    .find-vehicle-btn {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    /* SUPPORT AND FEATURES SECTION */
+    .support-n-features-desc {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .support-n-features-container {
+        margin: 0 20px;
+    }
+    .main-features-container {
+        margin-top: 70px;
+    }
+    /* AWARDEE SECTION */
+    .section-awardee {
+        padding-top: 70px;
+    }
+    .section-awardee-conatiner {
+        padding: 0 2%;
+    }
+    .orias-award-container {
+        width: 29%;
+    }
+    .testimonial-container {
+        width: 69%;
+    }
+    /* RECOMMENDATION SECTION */
+    .section-recommendation {
+        padding: 70px 0;
+    }
+    .recommendation-item-right {
+        padding-right: 15px;
+    }
+}
+
+/* --------------------------------------------- */
+/* TABLET VIEW - (min: 768px | max: 991px)
+/* --------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /* HEADER */
+    .navbar-brand {
+        left: 10px;
+    }
+    .navbar-right {
+        right: 10px;
+    }
+    /* HERO SECTION */
+    .hero-header {
+        margin-top: 150px;
+    }
+    #main-hero-banner .hero-header, #main-hero-banner .hero-subheader {
+        left: 30px;
+        width: 60%;
+    }
+    /* REGIFT CONTENTS SECTION */
+    .section-regift-contents {
+        padding-top: 70px;
+    }
+    .product-item-info {
+        min-height: 165px;
+    }
+    .product-item-container {
+        padding: 0 5px;
+    }
+    /* MAIN FEATURES SECTION */
+    .support-container {
+        min-width: unset;
+        left: unset;
+        transform: none;
+        width: 100%;
+    }
+    .main-features-container {
+        margin-top: 100px;
+    }
+    /* AWARDEE SECTION */
+    .orias-award-container {
+        width: 35%;
+        padding: 0 7px;
+    }
+    .testimonial-container {
+        width: 65%;
+        margin-top: 30px;
+    }
+    /* RECOMMENDATION SECTION */
+    .recommendation-item-left {
+        height: 330px;
+        overflow: hidden;
+        width: 100%;
+    }
+    .recommendation-item-left img {
+        top: -70%;
+    }
+    .recommendation-item-right {
+        width: 100%;
+    }
+    .recommendation-video {
+        height: 100%;
+    }
+    .section-recommendation {
+        padding: 30px 0;
+    }
+}
+
+
+/* --------------------------------------------- */
+/* MOBILE VIEW - (max: 768px)
+/* --------------------------------------------- */
+@media screen and (max-width: 767px) {
+    /* HEADER */
+    .navbar-brand {
+        left: 0;
+    }
+    .header-icons {
+        position: relative;
+        display: block;
+        float: right;
+        margin-right: 15px;
+    }
+    .header-icons i {
+        font-size: 35px;
+        padding: 22px 12px;
+        color: #437ac7;
+        cursor: pointer;
+    }
+    /* HERO SECTION */
+    .section-hero {
+        background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner1.jpg') right center no-repeat;
+    }
+    .section-hero.banner-2 {
+        background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner2.jpg') right center no-repeat;
+    }
+    .section-hero.banner-3 {
+        background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner3.jpg') right center no-repeat;
+    }
+    #main-hero-banner .container {
+        transition: all 0.3s ease-in-out;
+        background: linear-gradient(to right, rgba(0, 186, 255, 0.55), rgba(0, 114, 255, 0.48));
+    }
+    .hero-header {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hero-santa-hat {
+        left: 0;
+    }
+    .hero-header h1 {
+        color: #edf9ff;
+        text-align: center;
+        text-shadow: 0px 3px 4px rgba(0, 40, 82, 0.56), 0px 8px 13px rgba(0, 55, 156, 0.1), 0px 18px 23px rgba(0, 55, 123, 0.1);
+    }
+    .hero-subheader {
+        width: 100%;
+        padding: 0 40px;
+        min-width: unset;
+        /* background: #005a9870; */
+    }
+    .hero-subheader h3 {
+        color: #edf9ff;
+        text-align: right;
+        padding: 0 15px;
+    }
+    .hero-subheader-texts:nth-child(2) {
+        border-left: 2px solid rgba(153, 212, 255, 0.33);
+    }
+    /* TOP FEATURES SECTION */
+    .features-content {
+        width: 50%;
+        float: left;
+    }
+    .features-content p {
+        text-align: left;
+    }
+    .regift-container {
+        width: 85%;
+    }
+    .regift-container p {
+        width: 100%;
+        left: unset;
+        transform: none;
+    }
+    .section-regift-contents {
+        padding-top: 70px;
+    }
+    .regift-contents-container {
+        margin: 0;
+    }
+    .section-regift-contents .col-sm-4 {
+        border: none;
+        border-top: 1px solid #eaeaea;
+        min-height: unset !important;
+        padding: 60px 0 40px 0;
+        margin-bottom: 10px;
+    }
+    .section-regift-contents .col-sm-4:nth-child(1), 
+    .section-regift-contents .col-sm-4:nth-child(2) {
+        border-right: unset;
+    }
+    .section-regift-contents .col-sm-4:last-child {
+        border-bottom: 1px solid #eaeaea;
+    }
+    .support-n-features-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .support-container {
+        min-width: unset;
+        width: 100%;
+    }
+    .support-n-features-header {
+        padding: 0 20px;
+    }
+    .support-n-features-desc {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .support-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .main-features-container {
+        margin-top: 50px;
+    }
+    .main-features-item {
+        margin-bottom: 20px;
+    }
+    .main-features-item:nth-child(2n+1) {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .section-awardee {
+        padding-top: 60px;
+    }
+    .orias-award-container {
+        width: 100%;
+    }
+    .orias-award-container img {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .testimonial-container {
+        width: 100%;
+        padding-left: 0;
+        padding: 0 20px;
+        margin-top: 0;
+        bottom: 30px;
+    }
+    .stars-container {
+        margin: 0 auto;
+        position: relative;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        float: left;
+    }
+    .testimonial-text {
+        text-align: center;
+    }
+    .testimonial-source {
+        float: none;
+        position: relative;
+        display: block;
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    /* RECOMMENDATION SECTION */
+    .recommendation-item-left {
+        height: 250px;
+        overflow: hidden;
+        width: 100%;
+    }
+    .recommendation-item-left img {
+        top: -50%;
+    }
+    .recommendation-item-right {
+        width: 100%;
+    }
+    .recommendation-video {
+        height: 100%;
+    }
+    .section-recommendation {
+        padding: 30px 0;
+    }
+    .recommendation-item-right {
+        padding-right: 20px;
+    }
+    .design-your-mat-img {
+        width: 100%;
+    }
+    .recommendation-item-left img {
+        top: 0;
+        height: 100%;
+    }
+    .common-mat-issues {
+        padding-left: 25px;
+    }
+}
+
+/* --------------------------------------------- */
+/* MOBILE VIEW (CUSTOM)
+/* --------------------------------------------- */
+@media screen and (min-width: 578px) and (max-width: 767px) {
+    .hero-header {
+        width: 595px;
+    }
+    .hero-santa-hat {
+        left: 41px;
+    }
+    .hero-subheader-texts {
+        left: 35px;
+    }
+}
+@media screen and (min-width: 370px) and (max-width: 577px) {
+    .hero-header {
+        width: 400px;
+    }
+    .hero-santa-hat {
+        left: 43px;
+    }
+    .hero-header {
+        margin-top: 155px;
+    }
+    .hero-subheader-texts:nth-child(1) {
+        width: 100%;
+    }
+    .hero-subheader-texts:nth-child(1) h3 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 17px;
+        width: 70%;
+        margin: 0 auto;
+        padding: 15px;
+        background: #ff3b3bde;
+        width: 287px;
+    }
+    .hero-subheader-texts:nth-child(2) {
+        display: none;
+    }
+    .hero-subheader-texts:nth-child(1) h3:before {
+        content: " ";
+        position: absolute;
+        top: -15px;
+        left: -65px;
+        z-index: -1;
+        border-style: solid;
+        border-width: 41px;
+        border-color: #ff3b3bde  #ff3b3bde  #ff3b3bde transparent;
+    }
+    .hero-subheader-texts:nth-child(1) h3:after {
+        content: " ";
+        position: absolute;
+        top: -15px;
+        right: -65px;
+        z-index: -1;
+        border-style: solid;
+        border-width: 41px;
+        border-color: #ff3b3bde transparent #ff3b3bde  #ff3b3bde;
+    }
+    .main-features-title {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 370px) {
+    .navbar-brand {
+        padding: 21px 15px;
+    }
+    .brand-img {
+        width: 150px;
+    }
+    .header-icons {
+        margin-right: 10px;
+    }
+    .header-icons i {
+        font-size: 25px;
+        padding: 27px 5px;
+    }
+    .hero-header h1 {
+        font-size: 45px;
+        padding: 0 20px;
+    }
+    .hero-santa-hat {
+        top: -13px;
+        left: 70px;
+        width: 50px;
+    }
+    .hero-subheader {
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .hero-subheader-texts { 
+        width: 100%;
+    }
+    .hero-subheader-texts:nth-child(1) h3 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 17px;
+        width: 100%;
+        padding: 15px;
+        background: #ff3b3bde;
+        transform: none;
+        top: 0;
+    }
+    .hero-subheader-texts:nth-child(2) {
+        display: none;
+    }
+    .hero-subheader-texts:nth-child(1) h3:before,
+    .hero-subheader-texts:nth-child(1) h3:after {
+        content: " ";
+    }
+    .main-features-title {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 320px) {
+    .main-features-item {
+        width: 100%;
+    }
+    .find-vehicle-btn {
+        width: 80%;
+    }
+    .main-features-title {
+        margin-top: 0;
+    }
+}
+
+
 
 /* --------------------------------------------- */
 /* CSS3 ANIMATIONS

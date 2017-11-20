@@ -1,7 +1,7 @@
 $(function() {
 
     // SHOW/HIDE MORE ARTICLE CONTENTS
-    $('.article-link-1').on('click touchstart', function() {
+    $('.article-link-1').on('click', function() {
         $('.article-1-more-content').slideToggle();
         if($(this).text() === '> Read More') {
             $(this).text('> Read Less');
@@ -10,7 +10,7 @@ $(function() {
         }
     });
 
-    $('.article-link-2').on('click touchstart', function() {
+    $('.article-link-2').on('click', function() {
         $('.article-2-more-content').slideToggle();
         if($(this).text() === '> Read More') {
             $(this).text('> Read Less');
@@ -62,7 +62,6 @@ $(function() {
         }, 2250);
     }
 
-    // SNOW FX ANIMATION
     
 });
 
