@@ -125,20 +125,6 @@ a:not(.underlined):visited {
 /* --------------------------------------------- */
 /* SECTION - HERO
 /* --------------------------------------------- */
-#main-hero-banner:before {
-	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 99;
-	-webkit-animation: snow 10s linear infinite;
-	-moz-animation: snow 10s linear infinite;
-	-ms-animation: snow 10s linear infinite;
-    animation: snow 10s linear infinite;
-}
 .section-hero {
     min-height: 580px;
     background: url('https://s3-ap-southeast-2.amazonaws.com/cloudmall-webassets/fitmycar/event+pages/gift+ideas+landing+page/1920x580_car-gifts-banner1.jpg') center center no-repeat;
@@ -242,7 +228,7 @@ a:not(.underlined):visited {
     display: inline-block;
     float: left;
     top: 1px;
-    margin-right: 10px;
+    margin-right: 8px;
     font-size: 20px;
 }
 .features-content p {
@@ -602,7 +588,7 @@ a:not(.underlined):visited {
     float: left;
     width: 70%;
     margin-top: 60px;    
-    border-left: 1px solid #e6e6e6;
+    border-left: 2px solid #A3A3A3;
     padding-left: 25px;
 }
 .testimonial-stars {
@@ -787,7 +773,7 @@ a:not(.underlined):visited {
     #main-hero-banner .container {
         width: 100%;
         height: 580px;
-        background: linear-gradient(to right, rgba(0, 186, 255, 0.36), rgba(0, 114, 255, 0.29));
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.19));
     }
 }
 
@@ -850,9 +836,6 @@ a:not(.underlined):visited {
     .hero-subheader-texts:first-child h3 {
         transform: translateY(25%);
         padding-right: 10px;
-    }
-    .hero-subheader-texts:last-child {
-        border-left: 2px solid #90bbdc;
     }
     /* TOP FEATURES SECTION */
     .features-container {
@@ -1055,7 +1038,7 @@ a:not(.underlined):visited {
     }
     #main-hero-banner .container {
         transition: all 0.3s ease-in-out;
-        background: linear-gradient(to right, rgba(0, 186, 255, 0.55), rgba(0, 114, 255, 0.48));
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.29));
     }
     .hero-header {
         width: 80%;
@@ -1066,9 +1049,9 @@ a:not(.underlined):visited {
         left: 0;
     }
     .hero-header h1 {
-        color: #edf9ff;
+        color: #FFFFFF;
         text-align: center;
-        text-shadow: 0px 3px 4px rgba(0, 40, 82, 0.56), 0px 8px 13px rgba(0, 55, 156, 0.1), 0px 18px 23px rgba(0, 55, 123, 0.1);
+        text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.56), 0px 8px 13px rgba(0, 0, 0, 0.10), 0px 18px 23px rgba(0, 0, 0, 0.1);
     }
     .hero-subheader {
         width: 100%;
@@ -1077,12 +1060,15 @@ a:not(.underlined):visited {
         /* background: #005a9870; */
     }
     .hero-subheader h3 {
-        color: #edf9ff;
+        color: #F0F0F0;
         text-align: right;
         padding: 0 15px;
     }
     .hero-subheader-texts:nth-child(2) {
-        border-left: 2px solid rgba(153, 212, 255, 0.33);
+        border-left: 2px solid rgba(255, 255, 255, 0.33);
+        background: #d2d2d266;
+        width: unset;
+        padding: 0 15px;
     }
     /* TOP FEATURES SECTION */
     .features-container {
@@ -1299,6 +1285,9 @@ a:not(.underlined):visited {
         float: left;
         padding: 12px 15px;
     }
+    .features-content p {
+        text-align: center !important;
+    }
     /* REGIFT CONTENTS SECTION */
     .regift-product-galleries .product-item-container {
         width: 80%;
@@ -1313,6 +1302,16 @@ a:not(.underlined):visited {
     }
     .main-features-title {
         margin-top: 0;
+    }
+    .features-content {
+        text-align: center;
+    }
+    .features-content .fa {
+        display: inline-block !important;
+        float: none;
+    }
+    .features-content p {
+        display: inline-block;
     }
     /* REGIFT CONTENTS SECTION */
     .regift-category-headers .product-item-container {
@@ -1415,28 +1414,3 @@ a:not(.underlined):visited {
         width: 80%;
     }
 }
-
-/* --------------------------------------------- */
-/* CSS3 ANIMATIONS
-/* --------------------------------------------- */
-
-@keyframes snow {
-    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-  }
-  @-moz-keyframes snow {
-    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-    100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
-  }
-  @-webkit-keyframes snow {
-    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-  }
-  @-ms-keyframes snow {
-    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-  }	

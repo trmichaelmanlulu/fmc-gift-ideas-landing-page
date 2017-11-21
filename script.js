@@ -46,7 +46,9 @@ $(function() {
     });
 
     // ANIMATE HERO BANNER
-    animateHeroBanner();
+    $(window).load(function() {
+        animateHeroBanner();
+    });
     function animateHeroBanner() {
         setTimeout(function() {
             $('.section-hero').removeClass('banner-2 banner-3')
